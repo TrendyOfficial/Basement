@@ -16,6 +16,7 @@ import forest from "./list/forest";
 import wolverine from "./list/wolverine";
 import popsicle from "./list/popsicle";
 import hulk from "./list/hulk";
+import nebula from "./list/nebula";
 
 export const allThemes = [
   teal,
@@ -36,4 +37,5 @@ export const allThemes = [
   hulk,
   wolverine,
   popsicle,
+  nebula,
 ]
