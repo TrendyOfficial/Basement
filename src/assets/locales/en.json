@@ -1,6 +1,6 @@
 {
   "about": {
-    "description": "P-Stream is a fork of movie-web that is ensured to stay up even after the shutdown of movie-web.app. P-Stream runs on a private, self-hosted VPS. I run this site at a loss; there are very minimal ads due to my beliefs in free media.",
+    "description": "VPrime is a fork of movie-web that is ensured to stay up even after the shutdown of movie-web.app. P-Stream runs on a private, self-hosted VPS. I run this site at a loss; there are very minimal ads due to my beliefs in free media.",
     "help": "Can't find an answer? <0>Get support here.</0>",
     "faqTitle": "Common questions",
     "searchPlaceholder": "Search FAQ...",
@@ -13,7 +13,7 @@
     },
     "q1": {
       "title": "Where does the content come from?",
-      "body": "P-Stream does not host any content. When you click on something to watch, the internet is searched for the selected media (On the loading screen and in the 'video sources' tab you can see which source you're using). Media never gets uploaded by P-Stream, everything is through this searching mechanism.",
+      "body": "VPrime does not host any content. When you click on something to watch, the internet is searched for the selected media (On the loading screen and in the 'video sources' tab you can see which source you're using). Media never gets uploaded by P-Stream, everything is through this searching mechanism.",
       "section": "general"
     },
     "q2": {
@@ -33,11 +33,11 @@
     },
     "q5": {
       "title": "How can I find out more?",
-      "body": "P-Stream has a Discord server that can be found at the header of this page!",
+      "body": "VPrime has a Discord server that can be found at the header of this page!",
       "section": "general"
     },
     "q6": {
-      "title": "Is there a P-Stream app?",
+      "title": "Is there a VPrime app?",
       "body": "Not yet, but you can install it as a PWA (Progressive Web App). On iOS, use Safari → Share → Add to Home Screen. On Android, use Chrome → 3 dots → Add to Home Screen. An experimental APK is available via our Discord, but it's not recommended.",
       "section": "general"
     },
@@ -224,7 +224,7 @@
     "tagline": "Watch your favorite shows and movies for free with no ads ever! (っ'ヮ'c)"
   },
   "global": {
-    "name": "P-Stream",
+    "name": "VPrime",
     "pages": {
       "about": "About and FAQ",
       "legal": "Legal / DMCA",
@@ -232,7 +232,7 @@
       "support": "Support",
       "login": "Login",
       "onboarding": "Setup",
-      "pagetitle": "{{title}} - P-Stream",
+      "pagetitle": "{{title}} - VPrime",
       "register": "Register",
       "settings": "Settings",
       "migration": "Migrate Account",
@@ -307,15 +307,15 @@
     "titles": {
       "day": {
         "default": "What would you like to watch this afternoon?",
-        "extra": ["Viva la P-Stream!"]
+        "extra": ["Viva la VPrime!"]
       },
       "morning": {
         "default": "What would you like to watch this morning?",
-        "extra": ["Viva la P-Stream!"]
+        "extra": ["Viva la VPrime!"]
       },
       "night": {
         "default": "What would you like to watch tonight?",
-        "extra": ["Viva la P-Stream!"]
+        "extra": ["Viva la VPrime!"]
       },
       "420": {
         "default": "What would you like to watch this 4/20?",
