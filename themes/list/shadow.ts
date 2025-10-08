@@ -96,7 +96,7 @@ const tokens = {
 };
 
 export default createTheme({
-  name: "nebula",
+  name: "shadow",
   extend: {
     colors: {
       themePreview: {
