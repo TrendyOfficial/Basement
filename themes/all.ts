@@ -37,5 +37,5 @@ export const allThemes = [
   hulk,
   wolverine,
   popsicle,
-  nebula,
+  shadow,
 ]
