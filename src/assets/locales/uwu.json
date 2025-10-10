@@ -1,14 +1,14 @@
 {
     "about": {
-        "description": "uwu-stream is a fowk of m-movie-web that is ensuwed t-to stay up even OwO a-a-aftew the shutdown of movie-web.app. uwu-stream wuns on a p-pwivate, sewf-hosted VPS. I wun this site at a woss; thewe awe nyo ads due t-to my bewiefs in fwee media.",
+        "description": "uwu-Basement is a fowk of m-movie-web that is ensuwed t-to stay up even OwO a-a-aftew the shutdown of movie-web.app. uwu-Basement wuns on a p-pwivate, sewf-hosted VPS. I wun this site at a woss; thewe awe nyo ads due t-to my bewiefs in fwee media.",
         "faqTitle": "Common qwestions",
         "q1": {
-            "body": "uwu-stream does nyot host any OwO content. When you cwick ^w^ on something t-to watch, the intewnyet is seawched fow the sewected media (-(On the w-w-woading scween and in the 'video s-sources' tab you c-can see which souwce you'we using). Media nyevew gets upwoaded by majesty.wow, evewything is thwough this seawching mechanyism.",
+            "body": "uwu-Basement does nyot host any OwO content. When you cwick ^w^ on something t-to watch, the intewnyet is seawched fow the sewected media (-(On the w-w-woading scween and in the 'video s-sources' tab you c-can see which souwce you'we using). Media nyevew gets upwoaded by majesty.wow, evewything is thwough this seawching mechanyism.",
             "title": "Whewe does the content come fwom!?",
             "section": "genewaw"
         },
         "q2": {
-            "body": "It's not pawwsible to reqwest a show or movie, uwu-stream does not manage any content. Awl content is viewed through sources on the internet.",
+            "body": "It's not pawwsible to reqwest a show or movie, uwu-Basement does not manage any content. Awl content is viewed through sources on the internet.",
             "title": "Where can I rewqest a show or movie?",
             "section": "seawch"
         },
@@ -23,11 +23,11 @@
             "section": "genewal"
         },
         "q5": {
-            "body": "uwu-stream has a Discord server that can be found at the header of this page!",
+            "body": "uwu-Basement has a Discord server that can be found at the header of this page!",
             "title": "How can I find out more 😩?",
             "section": "genewal"
         },
-        "title": "About uwu-stream (^▽^)",
+        "title": "About uwu-Basement (^▽^)",
         "help": "can't find an answer (o_O)? <0>get s-suppowt here ☆*</0>",
         "q9": {
             "body": "no—since we don't h-host content, we cannot add ow change what's avaiwable-.- the content wist is based on w-what's p-pubwicwy accessible thwough the seawch mechanism.",
@@ -41,7 +41,7 @@
         },
         "q6": {
             "body": "not yet,,, b-but you can install it as a pwa (pwogwessive w-web app) xD on IOS, use safawi → share → add to h-home scween on andwoid, use chwome → 3 dots → add t-to home scween. an expewimentaw apk i-is a-avaiwable via ouw discowd, but it's not wecommended.",
-            "title": "is there a uwu-stream app owo?",
+            "title": "is there a uwu-Basement app owo?",
             "section": "genewal"
         },
         "q15": {
@@ -433,7 +433,7 @@
                     "proxy": "2. Pwoxy",
                     "default": "3. Defwault Swetup",
                     "defaultDescription": "uses uwu-stweam's buiwt-in pwoxy. it's the easiest option but might be swowew due to shawed bandwidth.",
-                    "outro": "if you have m-mwore qwuestions on how this wowks, feew fwee to ask on the <0>uwu-stream Discord</0> swervwer!"
+                    "outro": "if you have m-mwore qwuestions on how this wowks, feew fwee to ask on the <0>uwu-Basement Discord</0> swervwer!"
                 },
                 "title": "Understwanding a swetup",
                 "recommended": {
@@ -543,7 +543,7 @@
                     "text": "We wewe unyabwe ;;w;; t-to find any OwO embeds, pwease twy a diffewent souwce.",
                     "title": "Nyo embeds found"
                 },
-                "noStream": {
+                "noBasement": {
                     "text": "This souwce has nyo stweams fow this movie ow (・`ω´・) show. /ᐠ - ˕ ---マ Ⳋ",
                     "title": "No stweam :("
                 },
@@ -647,7 +647,7 @@
                 "homeButton": "Go home",
                 "enableExtension": "Enyabwe extension",
                 "title": "Pwease enyabwe the extension",
-                "text": "You've instawwed the s-P-Stream e-extension. To stawt u-using it, you nyeed t-to enyabwe the extension fow this site."
+                "text": "You've instawwed the s-Basement e-extension. To stawt u-using it, you nyeed t-to enyabwe the extension fow this site."
             },
             "tips": {
                 "7": "Hold SHIFT and twap the twitle to copy the wink with time!",
@@ -690,7 +690,7 @@
         "title": "Suppowt",
         "text": "uwu-flix is designyed t-to be as usew-fwiendwy as possibwe. Howevew, peopwe stiww have questions and issues. This page is h-h-hewe t-to hewp wesowve these showtcomings",
         "q1": {
-            "body": "weww, :3 you c-can join the officiaw <0>P-Stream discowd</0> and ask questions thewe ow (・`ω´・) you c-can emaiw the onye pwovided at the bottom of this page.",
+            "body": "weww, :3 you c-can join the officiaw <0>Basement discowd</0> and ask questions thewe ow (・`ω´・) you c-can emaiw the onye pwovided at the bottom of this page.",
             "title": "Where can I get help?"
         },
         "q2": {
@@ -1040,7 +1040,7 @@
         },
         "text": "uwu-stweam didn't fall out of a coconut twee, it was made mostwy by a s-single p-pewson (a vewy epic one at that☆) .",
         "q1": {
-            "body": "well, you can join the officiaw <0>uwu-stream discowd</0> and a-ask questions there ow you can emaiw the one pwovided at the bottom of this page.",
+            "body": "well, you can join the officiaw <0>uwu-Basement discowd</0> and a-ask questions there ow you can emaiw the one pwovided at the bottom of this page.",
             "title": "w-where can i get hewp (o_O)?"
         },
         "title": "Jwip"

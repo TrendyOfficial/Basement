@@ -1,4 +1,4 @@
-import { MetaOutput, NotFoundError, ScrapeMedia } from "@p-stream/providers";
+import { MetaOutput, NotFoundError, ScrapeMedia } from "@TrendyOfficial/providers";
 import { jwtDecode } from "jwt-decode";
 
 import { mwFetch } from "@/backend/helpers/fetch";

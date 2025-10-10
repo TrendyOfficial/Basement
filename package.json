@@ -1,9 +1,9 @@
 {
   "packageManager": "pnpm@9.14.4",
-  "name": "P-Stream",
+  "name": "Basement",
   "version": "5.1.2",
   "private": true,
-  "homepage": "https://github.com/TrendyOfficial/VPrime",
+  "homepage": "https://github.com/TrendyOfficial/Basement",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
