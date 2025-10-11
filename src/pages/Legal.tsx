@@ -75,7 +75,7 @@ export function LegalPage() {
                   internet.
                   <br />
                   <br />
-                  We don&apos;t host, store, or control any media files -
+                  We don&apos;t host, store, or control any media files –
                   everything is sourced from external third-party websites that
                   are already publicly accessible.
                   <br />
@@ -106,7 +106,7 @@ export function LegalPage() {
                 <br />
                 <br />
                 For content removal, please contact the original hosting
-                platform - we cannot remove what we don&apos;t control.
+                platform – we cannot remove what we don&apos;t control.
                 <br />
                 <br />
                 If you are a copyright holder and want to report a violation, we
@@ -131,8 +131,8 @@ export function LegalPage() {
                 information or identifying data.
                 <br />
                 <br />
-                Basement is entirely self hostable, and can be run on any
-                server. Even by yourself.
+                Basement is entirely self-hostable, and can be run on any
+                server—even by yourself.
               </Paragraph>
             }
           />
@@ -191,7 +191,7 @@ export function LegalPage() {
                 files.
                 <br />
                 <br />
-               <Basement></Basement> operates within legal boundaries and cooperates with
+                Basement operates within legal boundaries and cooperates with
                 legitimate requests when technically feasible.
               </Paragraph>
             }
