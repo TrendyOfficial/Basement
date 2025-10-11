@@ -1,5 +1,6 @@
 # Basement
-[![Basement Image](.github/Basement.png)](https://docs.pstream.mov)
+[![Basement Image](./public/Basement.png)](https://docs.pstream.mov)
+
 **I Do not own any of this, this is simply fan-made. The original one is P-stream Which is down below**
 
 
