@@ -3,7 +3,7 @@
 
 **I Do not own any of this, this is simply fan-made. The original one is P-stream Which is down below**
 
-
+[![Basement Image x P-stream](./public/BxP.png)](https://docs.pstream.mov)
 
 # P-Stream
 [![P-Stream Image](.github/P-Stream.png)](https://docs.pstream.mov)  
@@ -68,5 +68,5 @@ git push  # Push to YOUR repository
 ```
 
 
-## Contact Me / Discord
+## Contact Me / Discord (P-stream)
 [Discord](https://discord.gg/7z6znYgrTG)
