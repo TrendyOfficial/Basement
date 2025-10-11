@@ -1,4 +1,4 @@
-import { RunOutput } from "@TrendyOfficial/providers";
+import { RunOutput } from "@p-stream/providers";
 import { useCallback, useEffect, useRef, useState } from "react";
 import {
   Navigate,
