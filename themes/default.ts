@@ -1,37 +1,95 @@
 const tokens = {
-  black: "#0A0A12",
+  black: {
+    c50: "#000000",
+    c75: "#030303",
+    c80: "#080808",
+    c100: "#0d0d0d",
+    c125: "#141414",
+    c150: "#1a1a1a",
+    c200: "#262626",
+    c250: "#333333"
+  },
   white: "#FFFFFF",
-
-  starlight: {
-    c100: "#E4D9FF",
-    c200: "#C7B8FF",
-    c300: "#A996FF",
-    c400: "#8A73FF",
+  semantic: {
+    red: {
+      c100: "#F46E6E",
+      c200: "#E44F4F",
+      c300: "#D74747",
+      c400: "#B43434",
+    },
+    green: {
+      c100: "#60D26A",
+      c200: "#40B44B",
+      c300: "#31A33C",
+      c400: "#237A2B",
+    },
+    silver: {
+      c100: "#DEDEDE",
+      c200: "#B6CAD7",
+      c300: "#8EA3B0",
+      c400: "#617A8A",
+    },
+    yellow: {
+      c100: "#FFF599",
+      c200: "#FCEC61",
+      c300: "#D8C947",
+      c400: "#AFA349",
+    },
+    rose: {
+      c100: "#DB3D61",
+      c200: "#8A293B",
+      c300: "#812435",
+      c400: "#701B2B",
+    },
   },
-
-  nebula: {
-    c100: "#C082FF",
-    c200: "#A359EC",
-    c300: "#8D44D6",
-    c400: "#7831BF",
-    c500: "#572887",
+  blue: {
+    c50: "#ccccd6",
+    c100: "#a2a2a2",
+    c200: "#868686",
+    c300: "#646464",
+    c400: "#4e4e4e",
+    c500: "#383838",
+    c600: "#2e2e2e",
+    c700: "#272727",
+    c800: "#181818",
+    c900: "#0f0f0f"
   },
-
-  cosmos: {
-    c100: "#5D5DAE",
-    c200: "#3B3B8C",
-    c300: "#2A2A71",
-    c400: "#1F1F50",
+  cyan: {
+    c50: "#AAFFFF",
+    c100: "#82F8FF",
+    c200: "#5ADDF0",
+    c300: "#45C4D4",
+    c400: "#33AABE",
+    c500: "#299286",
+    c600: "#1F6373",
+    c700: "#193D4A",
+    c800: "#111E34", // Lightbar glow
+    c900: "#0B0F22"
   },
-
-  void: {
-    c100: "#32324F",
-    c200: "#272741",
-    c300: "#1E1E32",
-    c400: "#171728",
-    c500: "#131322",
-    c600: "#0F0F1B",
-    c700: "#0C1216",
+  ash: {
+    c50: "#8d8d8d",
+    c100: "#6b6b6b",
+    c200: "#545454",
+    c300: "#3c3c3c",
+    c400: "#313131",
+    c500: "#2c2c2c",
+    c600: "#252525",
+    c700: "#1e1e1e",
+    c800: "#181818",
+    c900: "#111111"
+  },
+  shade: {
+    c25: "#939393",
+    c50: "#7c7c7c",
+    c100: "#666666",
+    c200: "#4f4f4f",
+    c300: "#404040",
+    c400: "#343434",
+    c500: "#282828",
+    c600: "#202020",
+    c700: "#1a1a1a",
+    c800: "#151515",
+    c900: "#0e0e0e"
   },
 };
 
@@ -39,228 +97,230 @@ export const defaultTheme = {
   extend: {
     colors: {
       themePreview: {
-        primary: tokens.void.c300,
-        secondary: tokens.void.c400,
-        ghost: tokens.white,
+        primary: tokens.black.c80,
+        secondary: tokens.cyan.c600,
+        ghost: tokens.cyan.c200,
       },
 
       pill: {
-        background: tokens.void.c400,
-        backgroundHover: tokens.void.c300,
-        highlight: tokens.nebula.c200,
-        activeBackground: tokens.void.c700,
+        background: tokens.black.c100,
+        backgroundHover: tokens.black.c125,
+        highlight: tokens.blue.c200,
+        activeBackground: tokens.shade.c700,
       },
 
       global: {
-        accentA: tokens.nebula.c200,
-        accentB: tokens.cosmos.c200,
+        accentA: tokens.cyan.c200,
+        accentB: tokens.cyan.c300,
       },
 
       lightBar: {
-        light: tokens.cosmos.c300,
+        light: tokens.cyan.c800,
       },
 
       buttons: {
-        toggle: tokens.nebula.c300,
-        toggleDisabled: tokens.void.c200,
-        danger: tokens.starlight.c400,
-        dangerHover: tokens.starlight.c300,
+        toggle: tokens.cyan.c300,
+        toggleDisabled: tokens.black.c200,
+        danger: tokens.semantic.rose.c300,
+        dangerHover: tokens.semantic.rose.c200,
 
-        secondary: tokens.void.c400,
-        secondaryText: tokens.starlight.c100,
-        secondaryHover: tokens.void.c300,
+        secondary: tokens.black.c100,
+        secondaryText: tokens.semantic.silver.c300,
+        secondaryHover: tokens.black.c150,
         primary: tokens.white,
-        primaryText: tokens.black,
-        primaryHover: tokens.starlight.c200,
-        purple: tokens.nebula.c500,
-        purpleHover: tokens.nebula.c400,
-        cancel: tokens.void.c300,
-        cancelHover: tokens.void.c200,
+        primaryText: tokens.black.c50,
+        primaryHover: tokens.semantic.silver.c100,
+        purple: tokens.cyan.c600,
+        purpleHover: tokens.cyan.c400,
+        cancel: tokens.black.c100,
+        cancelHover: tokens.black.c150
       },
 
       background: {
-        main: tokens.void.c600,
-        secondary: tokens.void.c500,
-        secondaryHover: tokens.void.c400,
-        accentA: tokens.nebula.c500,
-        accentB: tokens.cosmos.c400,
+        main: tokens.black.c75,
+        secondary: tokens.black.c75,
+        secondaryHover: tokens.black.c75,
+        accentA: tokens.cyan.c600,
+        accentB: tokens.black.c100
       },
 
       modal: {
-        background: tokens.void.c500,
+        background: tokens.shade.c800,
       },
 
       type: {
-        logo: tokens.nebula.c100,
+        logo: tokens.cyan.c100,
         emphasis: tokens.white,
-        text: tokens.starlight.c200,
-        dimmed: tokens.starlight.c100,
-        divider: tokens.void.c200,
-        secondary: tokens.starlight.c100,
-        danger: tokens.starlight.c400,
-        success: tokens.starlight.c300,
-        link: tokens.nebula.c100,
-        linkHover: tokens.starlight.c200,
+        text: tokens.shade.c50,
+        dimmed: tokens.shade.c50,
+        divider: tokens.ash.c500,
+        secondary: tokens.ash.c100,
+        danger: tokens.semantic.red.c100,
+        success: tokens.semantic.green.c100,
+        link: tokens.cyan.c100,
+        linkHover: tokens.cyan.c50
       },
 
       search: {
-        background: tokens.void.c300,
-        hoverBackground: tokens.void.c200,
-        focused: tokens.void.c100,
-        placeholder: tokens.starlight.c100,
-        icon: tokens.starlight.c100,
+        background: tokens.black.c100,
+        hoverBackground: tokens.shade.c900,
+        focused: tokens.black.c125,
+        placeholder: tokens.shade.c200,
+        icon: tokens.shade.c500,
         text: tokens.white,
       },
 
       mediaCard: {
-        hoverBackground: tokens.void.c400,
-        hoverAccent: tokens.void.c500,
-        hoverShadow: tokens.void.c700,
-        shadow: tokens.void.c500,
-        barColor: tokens.cosmos.c100,
-        barFillColor: tokens.nebula.c100,
-        badge: tokens.void.c500,
-        badgeText: tokens.starlight.c100,
+        hoverBackground: tokens.shade.c900,
+        hoverAccent: tokens.black.c250,
+        hoverShadow: tokens.black.c50,
+        shadow: tokens.shade.c800,
+        barColor: tokens.ash.c200,
+        barFillColor: tokens.cyan.c100,
+        badge: tokens.shade.c700,
+        badgeText: tokens.ash.c100
       },
 
       largeCard: {
-        background: tokens.void.c300,
-        icon: tokens.nebula.c200,
+        background: tokens.black.c100,
+        icon: tokens.cyan.c400,
       },
 
       dropdown: {
-        background: tokens.void.c300,
-        altBackground: tokens.void.c400,
-        hoverBackground: tokens.void.c200,
-        highlight: tokens.starlight.c200,
-        highlightHover: tokens.starlight.c100,
-        text: tokens.starlight.c200,
-        secondary: tokens.starlight.c100,
-        border: tokens.void.c200,
-        contentBackground: tokens.void.c200,
+        background: tokens.black.c100,
+        altBackground: tokens.black.c80,
+        hoverBackground: tokens.black.c150,
+        highlight: tokens.semantic.yellow.c400,
+        highlightHover: tokens.semantic.yellow.c200,
+        text: tokens.shade.c50,
+        secondary: tokens.shade.c100,
+        border: tokens.shade.c400,
+        contentBackground: tokens.black.c50
       },
 
       authentication: {
-        border: tokens.void.c100,
-        inputBg: tokens.void.c300,
-        inputBgHover: tokens.void.c200,
-        wordBackground: tokens.void.c500,
-        copyText: tokens.starlight.c100,
-        copyTextHover: tokens.starlight.c50,
-        errorText: tokens.starlight.c400,
+        border: tokens.shade.c300,
+        inputBg: tokens.black.c100,
+        inputBgHover: tokens.black.c150,
+        wordBackground: tokens.shade.c500,
+        copyText: tokens.shade.c100,
+        copyTextHover: tokens.ash.c50,
+        errorText: tokens.semantic.rose.c100,
       },
 
       settings: {
         sidebar: {
-          activeLink: tokens.void.c400,
-          badge: tokens.void.c700,
+          activeLink: tokens.black.c100,
+          badge: tokens.shade.c900,
+
           type: {
-            secondary: tokens.void.c200,
-            inactive: tokens.starlight.c100,
-            icon: tokens.void.c300,
-            iconActivated: tokens.nebula.c200,
-            activated: tokens.nebula.c100,
+            secondary: tokens.shade.c200,
+            inactive: tokens.shade.c50,
+            icon: tokens.black.c200,
+            iconActivated: tokens.cyan.c200,
+            activated: tokens.cyan.c100
           },
         },
 
         card: {
-          border: tokens.void.c700,
-          background: tokens.void.c300,
-          altBackground: tokens.void.c300,
+          border: tokens.shade.c700,
+          background: tokens.black.c100,
+          altBackground: tokens.black.c100
         },
 
         saveBar: {
-          background: tokens.void.c500,
+          background: tokens.black.c50
         },
       },
 
       utils: {
-        divider: tokens.void.c200,
+        divider: tokens.ash.c300
       },
 
       onboarding: {
-        bar: tokens.void.c400,
-        barFilled: tokens.nebula.c300,
-        divider: tokens.void.c200,
-        card: tokens.void.c500,
-        cardHover: tokens.void.c400,
-        border: tokens.void.c300,
-        good: tokens.nebula.c100,
-        best: tokens.starlight.c100,
-        link: tokens.nebula.c100,
+        bar: tokens.shade.c400,
+        barFilled: tokens.cyan.c300,
+        divider: tokens.shade.c200,
+        card: tokens.shade.c800,
+        cardHover: tokens.shade.c700,
+        border: tokens.shade.c600,
+        good: tokens.cyan.c100,
+        best: tokens.semantic.yellow.c100,
+        link: tokens.cyan.c100,
       },
 
       errors: {
-        card: tokens.void.c400,
-        border: tokens.void.c300,
+        card: tokens.black.c75,
+        border: tokens.ash.c500,
+
         type: {
-          secondary: tokens.starlight.c100,
+          secondary: tokens.ash.c100,
         },
       },
 
       about: {
-        circle: tokens.void.c300,
-        circleText: tokens.starlight.c100,
+        circle: tokens.black.c100,
+        circleText: tokens.ash.c50
       },
 
       editBadge: {
-        bg: tokens.void.c300,
-        bgHover: tokens.void.c200,
-        text: tokens.starlight.c100,
+        bg: tokens.ash.c500,
+        bgHover: tokens.ash.c400,
+        text: tokens.ash.c50
       },
 
       progress: {
-        background: tokens.starlight.c100,
-        preloaded: tokens.starlight.c100,
-        filled: tokens.nebula.c200,
+        background: tokens.ash.c50,
+        preloaded: tokens.ash.c50,
+        filled: tokens.cyan.c200,
       },
 
       video: {
-        buttonBackground: tokens.cosmos.c100,
+        buttonBackground: tokens.ash.c600,
 
         autoPlay: {
-          background: tokens.void.c400,
-          hover: tokens.void.c300,
+          background: tokens.ash.c800,
+          hover: tokens.ash.c600,
         },
 
         scraping: {
-          card: tokens.void.c400,
-          error: tokens.starlight.c400,
-          success: tokens.starlight.c300,
-          loading: tokens.nebula.c200,
-          noresult: tokens.starlight.c100,
+          card: tokens.black.c50,
+          error: tokens.semantic.red.c200,
+          success: tokens.semantic.green.c200,
+          loading: tokens.cyan.c200,
+          noresult: tokens.black.c200
         },
 
         audio: {
-          set: tokens.nebula.c200,
+          set: tokens.cyan.c200,
         },
 
         context: {
-          background: tokens.void.c500,
-          light: tokens.starlight.c100,
-          border: tokens.void.c200,
-          hoverColor: tokens.void.c200,
-          buttonFocus: tokens.void.c100,
-          flagBg: tokens.void.c200,
-          inputBg: tokens.void.c300,
-          buttonOverInputHover: tokens.void.c200,
-          inputPlaceholder: tokens.cosmos.c100,
-          cardBorder: tokens.void.c400,
-          slider: tokens.starlight.c200,
-          sliderFilled: tokens.nebula.c200,
-          error: tokens.starlight.c400,
+          background: tokens.black.c50,
+          light: tokens.shade.c50,
+          border: tokens.ash.c600,
+          hoverColor: tokens.ash.c600,
+          buttonFocus: tokens.ash.c500,
+          flagBg: tokens.ash.c500,
+          inputBg: tokens.black.c100,
+          buttonOverInputHover: tokens.ash.c500,
+          inputPlaceholder: tokens.ash.c200,
+          cardBorder: tokens.ash.c700,
+          slider: tokens.black.c200,
+          sliderFilled: tokens.cyan.c200,
+          error: tokens.semantic.red.c200,
 
           buttons: {
-            list: tokens.void.c400,
-            active: tokens.void.c600,
+            list: tokens.ash.c700,
+            active: tokens.ash.c900,
           },
 
-          closeHover: tokens.void.c500,
+          closeHover: tokens.ash.c800,
 
           type: {
-            main: tokens.cosmos.c200,
-            secondary: tokens.cosmos.c100,
-            accent: tokens.nebula.c200,
+            main: tokens.semantic.silver.c300,
+            secondary: tokens.ash.c200,
+            accent: tokens.cyan.c200,
           },
         },
       },
