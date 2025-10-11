@@ -43,8 +43,8 @@ importers:
         specifier: ^1.8.0
         version: 1.8.0
       '@p-stream/providers':
-        specifier: github:TrendyOfficial/providers#production
-        version: https://codeload.github.com/TrendyOfficial/providers/tar.gz/e0b924e6f55f83fd5b4e5133aadae4d4d2cd0df6
+        specifier: github:p-stream/providers#production
+        version: https://codeload.github.com/p-stream/providers/tar.gz/e0b924e6f55f83fd5b4e5133aadae4d4d2cd0df6
       '@plasmohq/messaging':
         specifier: ^0.6.2
         version: 0.6.2(react@18.3.1)
@@ -1269,8 +1269,8 @@ packages:
     resolution: {integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==}
     engines: {node: '>=12.4.0'}
 
-  '@p-stream/providers@https://codeload.github.com/TrendyOfficial/providers/tar.gz/e0b924e6f55f83fd5b4e5133aadae4d4d2cd0df6':
-    resolution: {tarball: https://codeload.github.com/TrendyOfficial/providers/tar.gz/e0b924e6f55f83fd5b4e5133aadae4d4d2cd0df6}
+  '@p-stream/providers@https://codeload.github.com/p-stream/providers/tar.gz/e0b924e6f55f83fd5b4e5133aadae4d4d2cd0df6':
+    resolution: {tarball: https://codeload.github.com/p-stream/providers/tar.gz/e0b924e6f55f83fd5b4e5133aadae4d4d2cd0df6}
     version: 3.1.0
 
   '@pkgjs/parseargs@0.11.0':
@@ -6180,7 +6180,7 @@ snapshots:
 
   '@nolyfill/is-core-module@1.0.39': {}
 
-  '@p-stream/providers@https://codeload.github.com/TrendyOfficial/providers/tar.gz/e0b924e6f55f83fd5b4e5133aadae4d4d2cd0df6':
+  '@p-stream/providers@https://codeload.github.com/p-stream/providers/tar.gz/e0b924e6f55f83fd5b4e5133aadae4d4d2cd0df6':
     dependencies:
       abort-controller: 3.0.0
       cheerio: 1.0.0-rc.12
