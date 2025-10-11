@@ -102,11 +102,6 @@ const availableThemes = [
     selector: "theme-popsicle",
     key: "settings.appearance.themes.popsicle",
   },
-  {
-  id: "shadow",
-  selector: "theme-shadow",
-  key: "settings.appearance.themes.shadow",
-  },
 ];
 
 function ThemePreview(props: {
