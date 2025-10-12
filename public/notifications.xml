@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Basement Notifications</title>
-    <link>https://vprime1.vercel.app</link>
+    <link>https://v-basement.vercel.app</link>
     <description>Site updates and important notifications for Basement users</description>
     <language>en</language>
     <lastBuildDate>Mon, 28 Jul 2025 21:53:00 GMT</lastBuildDate>
-    <atom:link href="https://vprime1.vercel.app/notifications.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://v-basement.vercel.app/notifications.xml" rel="self" type="application/rss+xml" />
 
     <item>
       <guid>notification-041</guid>
