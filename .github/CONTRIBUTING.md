@@ -1,4 +1,8 @@
-# Contributing Guidelines for sudo-flix
+# Contributing Guidelines for Basement
+
+- Vblaze
+
+
 
 Thank you for investing your time in contributing to our project! Your contribution will be reflected on all of the community hosted instances that are on the latest version.
 
