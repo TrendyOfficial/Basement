@@ -25,12 +25,45 @@ export function DiscoverContent() {
   const carouselRefs = useRef<{ [key: string]: HTMLDivElement | null }>({});
   const progressItems = useProgressStore((state) => state.items);
 
-  // Only load data for the active tab
+  // State for active provider filtering
+  const [activeProvider, setActiveProvider] = useState<{
+    key: string;
+    providerId?: number;
+    name: string;
+  } | null>(null);
+
+  // Map of provider key to TMDB provider id, name, image
+  const providerMap: Record<
+    string,
+    { id?: number; name: string; img: string }
+  > = {
+    netflix: { id: 8, name: "Netflix", img: "/platforms/netflix.png" },
+    disneyplus: { id: 337, name: "Disney+", img: "/platforms/disneyplus.png" },
+    primevideo: { id: 119, name: "Prime Video", img: "/platforms/primevideo.png" },
+    appletv: { id: 350, name: "Apple TV+", img: "/platforms/appletv.png" },
+    hulu: { id: 15, name: "Hulu", img: "/platforms/hulu.png" },
+    crunchyroll: { id: 283, name: "Crunchyroll", img: "/platforms/crunchyroll.png" },
+    hbomax: { id: 384, name: "HBO Max", img: "/platforms/hbomax.png" },
+    paramount: { id: 531, name: "Paramount+", img: "/platforms/paramount.png" },
+  };
+
+  const providersOrder = [
+    "netflix",
+    "disneyplus",
+    "primevideo",
+    "appletv",
+    "hulu",
+    "crunchyroll",
+    "hbomax",
+    "paramount",
+  ];
+
   const isMoviesTab = selectedCategory === "movies";
   const isTVShowsTab = selectedCategory === "tvshows";
   const isEditorPicksTab = selectedCategory === "editorpicks";
 
   const handleCategoryChange = (category: string) => {
+    setActiveProvider(null);
     setSelectedCategory(category as "movies" | "tvshows" | "editorpicks");
   };
 
@@ -43,17 +76,62 @@ export function DiscoverContent() {
   };
 
   const movieProgressItems = Object.entries(progressItems || {}).filter(
-    ([_, item]) => item.type === "movie",
+    ([_, item]) => item.type === "movie"
   );
   const tvProgressItems = Object.entries(progressItems || {}).filter(
-    ([_, item]) => item.type === "show",
+    ([_, item]) => item.type === "show"
   );
 
-  // Render Movies content with lazy loading
+  function handleProviderClick(key: string) {
+    const p = providerMap[key];
+    if (!p) return;
+    setActiveProvider({ key, providerId: p.id, name: p.name });
+    // Optionally switch to movies tab by default:
+    // setSelectedCategory("movies");
+  }
+
+  function clearProviderFilter() {
+    setActiveProvider(null);
+  }
+
   const renderMoviesContent = () => {
+    if (activeProvider) {
+      return (
+        <>
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-3">
+              <img
+                src={providerMap[activeProvider.key].img}
+                alt={providerMap[activeProvider.key].name}
+                className="h-8 rounded-md"
+              />
+              <h3 className="text-lg font-semibold">
+                {t("discover.providerResults", { provider: activeProvider.name })}
+              </h3>
+            </div>
+            <Button theme="plain" onClick={clearProviderFilter}>
+              {t("discover.clearFilter") || "Clear"}
+            </Button>
+          </div>
+          <MediaCarousel
+            content={{
+              type: "provider",
+              providerId: activeProvider.providerId,
+              providerKey: activeProvider.key,
+              providerName: activeProvider.name,
+            }}
+            isTVShow={false}
+            carouselRefs={carouselRefs}
+            onShowDetails={handleShowDetails}
+            showProviders
+            moreContent
+          />
+        </>
+      );
+    }
+    // fallback: default content
     return (
       <>
-        {/* Movie Recommendations - only show if there are movie progress items */}
         {movieProgressItems.length > 0 && (
           <MediaCarousel
             content={{ type: "recommendations" }}
@@ -64,8 +142,6 @@ export function DiscoverContent() {
             showRecommendations
           />
         )}
-
-        {/* Latest Releases */}
         <MediaCarousel
           content={{ type: "latest", fallback: "nowPlaying" }}
           isTVShow={false}
@@ -73,8 +149,6 @@ export function DiscoverContent() {
           onShowDetails={handleShowDetails}
           moreContent
         />
-
-        {/* 4K Releases */}
         <MediaCarousel
           content={{ type: "latest4k", fallback: "popular" }}
           isTVShow={false}
@@ -82,8 +156,6 @@ export function DiscoverContent() {
           onShowDetails={handleShowDetails}
           moreContent
         />
-
-        {/* Top Rated */}
         <MediaCarousel
           content={{ type: "topRated" }}
           isTVShow={false}
@@ -91,8 +163,6 @@ export function DiscoverContent() {
           onShowDetails={handleShowDetails}
           moreContent
         />
-
-        {/* Provider Movies */}
         <MediaCarousel
           content={{ type: "provider" }}
           isTVShow={false}
@@ -101,8 +171,6 @@ export function DiscoverContent() {
           showProviders
           moreContent
         />
-
-        {/* Genre Movies */}
         <MediaCarousel
           content={{ type: "genre" }}
           isTVShow={false}
@@ -115,11 +183,43 @@ export function DiscoverContent() {
     );
   };
 
-  // Render TV Shows content with lazy loading
   const renderTVShowsContent = () => {
+    if (activeProvider) {
+      return (
+        <>
+          <div className="flex items-center justify-between mb-4">
+            <div className="flex items-center gap-3">
+              <img
+                src={providerMap[activeProvider.key].img}
+                alt={providerMap[activeProvider.key].name}
+                className="h-8 rounded-md"
+              />
+              <h3 className="text-lg font-semibold">
+                {t("discover.providerResults", { provider: activeProvider.name })}
+              </h3>
+            </div>
+            <Button theme="plain" onClick={clearProviderFilter}>
+              {t("discover.clearFilter") || "Clear"}
+            </Button>
+          </div>
+          <MediaCarousel
+            content={{
+              type: "provider",
+              providerId: activeProvider.providerId,
+              providerKey: activeProvider.key,
+              providerName: activeProvider.name,
+            }}
+            isTVShow
+            carouselRefs={carouselRefs}
+            onShowDetails={handleShowDetails}
+            showProviders
+            moreContent
+          />
+        </>
+      );
+    }
     return (
       <>
-        {/* TV Show Recommendations - only show if there are TV show progress items */}
         {tvProgressItems.length > 0 && (
           <MediaCarousel
             content={{ type: "recommendations" }}
@@ -130,8 +230,6 @@ export function DiscoverContent() {
             showRecommendations
           />
         )}
-
-        {/* On Air */}
         <MediaCarousel
           content={{ type: "latesttv", fallback: "onTheAir" }}
           isTVShow
@@ -139,8 +237,6 @@ export function DiscoverContent() {
           onShowDetails={handleShowDetails}
           moreContent
         />
-
-        {/* Top Rated */}
         <MediaCarousel
           content={{ type: "topRated" }}
           isTVShow
@@ -148,8 +244,6 @@ export function DiscoverContent() {
           onShowDetails={handleShowDetails}
           moreContent
         />
-
-        {/* Popular */}
         <MediaCarousel
           content={{ type: "popular" }}
           isTVShow
@@ -157,8 +251,6 @@ export function DiscoverContent() {
           onShowDetails={handleShowDetails}
           moreContent
         />
-
-        {/* Provider TV Shows */}
         <MediaCarousel
           content={{ type: "provider" }}
           isTVShow
@@ -167,8 +259,6 @@ export function DiscoverContent() {
           showProviders
           moreContent
         />
-
-        {/* Genre TV Shows */}
         <MediaCarousel
           content={{ type: "genre" }}
           isTVShow
@@ -181,7 +271,6 @@ export function DiscoverContent() {
     );
   };
 
-  // Render Editor Picks content
   const renderEditorPicksContent = () => {
     return (
       <>
@@ -210,28 +299,41 @@ export function DiscoverContent() {
         onCategoryChange={handleCategoryChange}
       />
 
+      <div className="flex justify-center items-center gap-8 mt-8 mb-6 flex-wrap">
+        {providersOrder.map((key) => {
+          const p = providerMap[key];
+          return (
+            <img
+              key={key}
+              src={p.img}
+              alt={p.name}
+              title={p.name}
+              className={classNames(
+                "h-10 cursor-pointer transition-transform hover:scale-110",
+                "rounded-md"
+              )}
+              onClick={() => handleProviderClick(key)}
+            />
+          );
+        })}
+      </div>
+
       <WideContainer ultraWide classNames="!px-0">
-        {/* Movies Tab */}
         <LazyTabContent isActive={isMoviesTab}>
           {renderMoviesContent()}
         </LazyTabContent>
-
-        {/* TV Shows Tab */}
         <LazyTabContent isActive={isTVShowsTab}>
           {renderTVShowsContent()}
         </LazyTabContent>
-
-        {/* Editor Picks Tab */}
         <LazyTabContent isActive={isEditorPicksTab}>
           {renderEditorPicksContent()}
         </LazyTabContent>
       </WideContainer>
 
-      {/* View All Button */}
       <div
         className={classNames(
           "flex justify-center mt-8 mb-12",
-          isMoviesTab ? "block" : "hidden",
+          isMoviesTab ? "block" : "hidden"
         )}
       >
         <Button theme="purple" onClick={() => navigate("/discover/all")}>
